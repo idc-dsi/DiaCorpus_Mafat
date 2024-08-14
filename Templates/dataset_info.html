@@ -8,6 +8,30 @@
     <link rel="stylesheet" href="../CSS/about.css">
     <script src="../js/includeHTML.js" defer></script>
     <link rel="icon" type="image/x-icon" href="..\DiaCorpus_Mafat\images\favicons\favicon.ico">
+    <style>
+        /* Increase bullet point size */
+        ul {
+            list-style-type: disc;
+            list-style-position: inside;
+            font-size: 1.1em; /* Increase the size of the bullet point */
+        }
+
+        /* Adjust line spacing between list items */
+        li {
+            line-height: 1.2; /* Decrease line height to shorten spacing between lines */
+            margin-bottom: 5px; /* Optional: add space between each list item for readability */
+        }
+        /* Ensure that additional lines are aligned with the text, not the bullet */
+        li::marker {
+            font-size: 1.1em; /* Ensures the bullet size remains consistent */
+        }
+    
+        /* Indent additional lines */
+        li {
+            text-indent: -1.5em; /* Adjust this value according to your bullet size */
+            padding-left: 1.1em; /* Ensure the first line aligns with the bullet */
+        }
+    </style>
 </head>
 <body>
     <!-- Include the header component -->
@@ -15,17 +39,69 @@
 
     <div class="project-container">
         <h1>Dataset Information</h1>
-        <h2> Sentiment Analysis Dataset</h2>
-        <h3> General Information:</h3>
-        <p>More information about the dataset will be available soon.</p>
-        <h3> Statistics:</h3>
-        <p> 30,0014 Twits & YouTube comments, labeled with sentiment (positive, negative, neutral, complex).</p>
-        <p> The dataset has 4 columns : 'id', 'text', 'sentiment', 'source'.</p>
+        
+        <h2>Sentiment Analysis Dataset</h2>
+        
+        <h3>Evaluation Reliability</h3>
+        <p>
+            Tagging text segments based on sentiment is largely subjective, as personal experiences,
+            pre-existing perceptions, thoughts, and beliefs of the annotator influence it. Therefore,
+            it is essential for the tagging instructions to be clear to ensure the annotators remain objective.
+            We ensured that there were at least three different annotators,
+            and in cases of disagreement among all three, more annotators were assigned.
+            Annotators were instructed to assess sentiment from the writer's point of view.
+        </p>
+        
+        <h3>General Information:</h3>
+        <p>The database includes 30,000 sentences selected according to the following criteria:</p>
+        <ul>
+            <li>
+                Sentences are written spontaneously by humans. The sentences do not contain additional types of information 
+                <br>
+                (such as HTML, tables, images, etc.).
+            </li>
+            <li>The content of the sentences covers a variety of topics.</li>
+            <li>The source of the information includes a combination of sentences and paragraphs.</li>
+            <li>
+                The sentences were written in the local dialect of Arabic, with most of the sentences written in the colloquial language commonly used 
+                <br>
+                on social networks.
+            </li>
+        </ul>
 
-        <h2> Coreference Resolution</h2>
+        <h3>Sources:</h3>
+        <p>The sentences were taken from two main sources:</p>
+        <ul>
+            <li>Tweets from Twitter: 20,000 tweets</li>
+            <li>YouTube video comments: 10,000 comments</li>
+        </ul>
+
+        <h3>Corpus Domain Distribution:</h3>
+        <p>The corpus contains sentences from various domains:</p>
+        <ul>
+            <li>General content: 34%</li>
+            <li>Sports: 12.8%</li>
+            <li>Religious content: 28%</li>
+            <li>Content with Religious Elements: 5.6%</li>
+            <li>Political content: 10.4%</li>
+            <li>Promotional content: 1.6%</li>
+            <li>Criminal-Security content: 0.8%</li>
+            <li>Content that cannot be categorized: 6.8%</li>
+        </ul>
+
+        <h3>Diversity of Topics:</h3>
+        <p>The texts were categorized into the following sentiment tags:</p>
+        <ul>
+            <li><strong>Positive:</strong> Expressing a positive or optimistic sentiment.</li>
+            <li><strong>Negative:</strong> Expressing a critical, non-positive, or pessimistic sentiment.</li>
+            <li><strong>Neutral:</strong> Sentences without strong positive or negative sentiment.</li>
+            <li><strong>Complex:</strong> When the sentiment is unclear, ambiguous, or context-dependent.</li>
+        </ul>
+        
+        <h2>Coreference Resolution</h2>
         <p>More information about the dataset will be available soon.</p>
 
-        <h2> Summarization</h2>
+        <h2>Summarization</h2>
         <p>More information about the dataset will be available soon.</p>
     </div>
 </body>
